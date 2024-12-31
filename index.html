@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaz Timing Web!</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+ <header>
+    <div class="logo">
+        <img src="image/3.png" alt="logo">
+    </div>
+    <div class="head"><h1>PRAYER TIMES!</h1>
+    </div>
+ </header>
+ <section class="sec1">
+    <div class="inp1">
+    <label for="city">
+       Enter your City Name:<input type="text"  id="city" placeholder="City Name">
+    </label>
+    <div id="refresh1">
+    <i onclick="cancel()" class="fa-solid fa-xmark"></i>
+</div>
+</div>
+<div class="inp2">
+    <label for="country">
+        Enter your Country Name: <input type="text" id="country" placeholder="Country Name">
+    </label>
+    <div id="refresh2">
+        <i onclick="cancel1()" class="fa-solid fa-xmark"></i>
+    </div>
+</div>
+    <div class="but">
+    <button onclick="Click()">click</button>
+    <button id="ref" onclick="Refresh()"><i class="fa-solid fa-rotate-right"></i></button>
+</div>
+ </section>
+ <section class="sec2">
+    <ul class="list1">
+        <li id="Fajr"></li>
+        <li id="Dhuhr"></li>
+        <li id="Asr"></li>
+        <li id="Maghrib"></li>
+        <li id="Isha"></li>
+    </ul>
+    <ul class="list2">
+        <li id="sunset"></li>
+        <li id="Imsak"></li>
+        <li id="Sunrise"></li>
+        <li id="Midnight"></li> 
+        <li id="Date"></li>
+    </ul>
+ </section>
+ <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+ <script src="script.js"></script>
+</body>
+</html>
