@@ -54,6 +54,7 @@ input{
     padding: 6px 20px;
     border-radius: 6px;
     border: none;
+    font-weight: bold;
 }
 .but button{
     padding: 3px 20px;
