@@ -30,8 +30,8 @@ header{
 }
 .sec2{
     display: flex;
-  margin-top: 40px;
-    margin-left: 40px;
+  padding-top: 40px;
+padding-left: 40px;
   column-gap: 10px;
 }
 .sec1{
@@ -40,13 +40,15 @@ header{
     margin-top: 50px;
     row-gap: 14px;
     margin-left: 52px;
+    flex-wrap: wrap;
 }
 .sec1 label{
     font-weight: bold;
-    font-size: 1.2rem;
+    color:#281501;
+    font-size: 1.3rem;
 }
 .sec1  #city{
-    margin-left: 40px;
+    margin-left: 39px;
 }
 input{
     padding: 6px 20px;
@@ -90,35 +92,121 @@ input{
     flex-direction: column;
     row-gap: 5px;
 }
- .inp1{
+.sec1 .inp1{
+    display: flex;
+}
+.inpjoin{
     position: relative;
 }
- /* .inp1  #city:focus + #refresh1{
+.inpjoin:focus-within  #refresh1 {
     cursor: pointer;
-    opacity: 1;
-} */
-.inp1 #refresh1{
-    position: absolute;
-    left:430px;
-   top: 6px;
-   opacity: 0.4;
-   /* transition: all;
-   transition-duration: 0.3s;
-   transition-timing-function:ease-in-out; */
+    opacity: 0.4;
 } 
- .inp2{
+ .inpjoin #refresh1{
+    position: absolute;
+    bottom: 3.5px;
+    left: 226px;
+    opacity: 0; 
+   transition: all;
+   transition-duration: 0.3s;
+   transition-timing-function:ease-in-out;
+
+} 
+.inp2{
+display: flex;
+}
+.inpjoin1{
     position: relative;
 }
- /* .inp1  #city:focus + #refresh1{
+.inpjoin1:focus-within #refresh2{
     cursor: pointer;
-    opacity: 1;
-} */
-.inp2 #refresh2{
-    position: absolute;
-    left:430px;
-   top: 6px;
-   opacity: 0.4;
-   /* transition: all;
-   transition-duration: 0.3s;
-   transition-timing-function:ease-in-out; */
+    opacity: 0.4;
 } 
+.inpjoin1 #refresh2{
+    position: absolute;
+    left:190px;
+    bottom: 3px; 
+   opacity: 0; 
+   transition: all;
+   transition-duration: 0.3s;
+   transition-timing-function:ease-in-out;
+} 
+@media (max-width:767px){
+    header{
+        column-gap: 82px;
+    }
+    .sec1 label{
+        color:#281501;
+    } 
+    .sec2{
+        justify-content: center;
+    } 
+}
+@media (max-width:567px){
+    header {
+        column-gap:28px;
+    }
+    .sec1 label{
+        color:#281501;
+    } 
+    .head{
+        font-size: 1.5rem;
+    } 
+    .sec2 {
+        display: flex;
+        padding-top: 40px;
+        justify-content: center;
+        flex-wrap: wrap;
+        row-gap: 8px;
+    }
+}
+@media (max-width:390px) {
+  
+        .logo img {
+            width: 112px;
+        }
+        .head{
+            font-size: 1.08rem;
+        }
+        header{
+            column-gap: 10px;
+        }
+        .sec1 .inp1{
+            display: flex;
+            flex-direction: column;
+            row-gap: 13px;
+        }
+        .sec1 #city {
+             margin-left: 0px; 
+             padding: 10px 40px;
+             font-size: 1rem;
+        }
+        .inp2 {
+            display: flex;
+            flex-direction: column;
+            row-gap: 13px;
+        }
+        .sec1 #country {
+            padding: 10px 40px;
+            font-size: 1rem;
+       }
+       .sec1 label{
+        font-size: 1.6rem;
+    }
+    .inpjoin1 #refresh2 {
+        left: 252px;
+        bottom: 8px;
+    }
+    .inpjoin #refresh1 {
+        bottom: 8px;
+        left: 250px;
+    }
+    .but button {
+        padding: 8px 46px;
+        font-size: 1.2rem;
+    }
+    #ref {
+        padding: 5px 14px;
+    }
+   
+}

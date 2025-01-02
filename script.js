@@ -1,3 +1,15 @@
+const formatChange = (valueSplit) => {
+let splittedTime = valueSplit.split(":");
+if(splittedTime[0] > 12){
+    let timeCon = splittedTime[0] - 12;
+    return `${timeCon}:${splittedTime[1]} PM`
+}else if(splittedTime[0] == 12){
+    return `${splittedTime[0]}:${splittedTime[1]} PM`
+}else{
+    return `${splittedTime[0]}:${splittedTime[1]} AM`
+}
+}
+
 const Click = () =>{
 let userCity = document.getElementById("city").value;
 let userCountry = document.getElementById("country").value;
@@ -11,15 +23,15 @@ axios.get(`https://api.aladhan.com/v1/timingsByCity?city=${userCity}&country=${u
 .then((timingresponse) => {
 console.log("Timing Response" , timingresponse.data);
 let short = timingresponse.data.data;
-document.getElementById("Fajr").innerText = `Fajr: ${short.timings.Fajr}`
-document.getElementById("Dhuhr").innerText = `Dhuhr: ${short.timings.Dhuhr}`
-document.getElementById("Asr").innerText = `Asr: ${short.timings.Asr}`
-document.getElementById("Maghrib").innerText = `Maghrib: ${short.timings.Maghrib}`
-document.getElementById("Isha").innerText = `Isha: ${short.timings.Isha}`
-document.getElementById("Date").innerText = `Date: ${short.date.gregorian.date}`
-document.getElementById("sunset").innerText = `Sunset: ${short.timings.Sunset}`
+document.getElementById("Fajr").innerText = `Fajr: ${formatChange(short.timings.Fajr)}`
+document.getElementById("Dhuhr").innerText = `Dhuhr: ${formatChange(short.timings.Dhuhr)}`
+document.getElementById("Asr").innerText = `Asr: ${formatChange(short.timings.Asr)}`
+document.getElementById("Maghrib").innerText = `Maghrib: ${formatChange(short.timings.Maghrib)}`
+document.getElementById("Isha").innerText = `Isha: ${formatChange(short.timings.Isha)}`
+document.getElementById("Date").innerText = `Date: ${short.date.readable}`
+document.getElementById("sunset").innerText = `Sunset: ${formatChange(short.timings.Sunset)}`
 document.getElementById("Imsak").innerText = `Imsak: ${short.timings.Imsak}`
-document.getElementById("Sunrise").innerText = `Sunrise: ${short.timings.Sunrise}`
+document.getElementById("Sunrise").innerText = `Sunrise: ${formatChange(short.timings.Sunrise)}`
 document.getElementById("Midnight").innerText = `Midnight: ${short.timings.Midnight}`
 
 })
