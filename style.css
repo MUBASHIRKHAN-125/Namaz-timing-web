@@ -194,13 +194,16 @@ display: flex;
        .sec1 label{
         font-size: 1.6rem;
     }
+    .sec2{
+        padding-left: 0px;
+    }
     .inpjoin1 #refresh2 {
-        left: 252px;
+        left: 268px;
         bottom: 8px;
     }
     .inpjoin #refresh1 {
         bottom: 8px;
-        left: 250px;
+        left: 270px;
     }
     .but button {
         padding: 8px 46px;
@@ -210,4 +213,10 @@ display: flex;
         padding: 5px 14px;
     }
    
+}
+@media (max-width:380px) {
+    .head{
+        font-size:0.99rem;
+    }
+    
 }
