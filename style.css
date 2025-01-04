@@ -30,16 +30,18 @@ header{
 }
 .sec2{
     display: flex;
-  padding-top: 40px;
-padding-left: 40px;
-  column-gap: 10px;
+    padding-top: 40px;
+    padding-left: 40px;
+    column-gap: 10px;
+    flex-wrap: wrap;
+    row-gap: 9px;
 }
 .sec1{
     display: flex;
     flex-direction: column;
     margin-top: 50px;
     row-gap: 14px;
-    margin-left: 52px;
+    margin-left: 12px;
     flex-wrap: wrap;
 }
 .sec1 label{
@@ -98,6 +100,9 @@ input{
 }
 .inpjoin{
     position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 .inpjoin:focus-within  #refresh1 {
     cursor: pointer;
@@ -105,8 +110,7 @@ input{
 } 
  .inpjoin #refresh1{
     position: absolute;
-    bottom: 3.5px;
-    left: 226px;
+    right: 6px;
     opacity: 0; 
    transition: all;
    transition-duration: 0.3s;
@@ -118,6 +122,9 @@ display: flex;
 }
 .inpjoin1{
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .inpjoin1:focus-within #refresh2{
     cursor: pointer;
@@ -125,8 +132,7 @@ display: flex;
 } 
 .inpjoin1 #refresh2{
     position: absolute;
-    left:190px;
-    bottom: 3px; 
+    right:6px;
    opacity: 0; 
    transition: all;
    transition-duration: 0.3s;
@@ -136,31 +142,19 @@ display: flex;
     header{
         column-gap: 82px;
     }
-    .sec1 label{
-        color:#281501;
-    } 
     .sec2{
         justify-content: center;
+        padding-left: 0px;
     } 
 }
 @media (max-width:567px){
     header {
         column-gap:28px;
     }
-    .sec1 label{
-        color:#281501;
-    } 
     .head{
         font-size: 1.5rem;
     } 
-    .sec2 {
-        display: flex;
-        padding-top: 40px;
-        justify-content: center;
-        flex-wrap: wrap;
-        row-gap: 8px;
-    }
-}
+   }
 @media (max-width:390px) {
   
         .logo img {
@@ -173,41 +167,38 @@ display: flex;
             column-gap: 10px;
         }
         .sec1 .inp1{
-            display: flex;
+             display: flex;
             flex-direction: column;
-            row-gap: 13px;
+            row-gap: 13px; 
+            padding: 8px;
+        } 
+        .sec1{
+            margin-top: 33px;
         }
         .sec1 #city {
              margin-left: 0px; 
-             padding: 10px 40px;
-             font-size: 1rem;
+             height: 34px;
         }
         .inp2 {
-            display: flex;
+           display: flex; 
             flex-direction: column;
-            row-gap: 13px;
+            row-gap: 13px; 
+            padding: 8px;
         }
         .sec1 #country {
-            padding: 10px 40px;
-            font-size: 1rem;
+            height: 34px;
        }
        .sec1 label{
         font-size: 1.6rem;
     }
-    .sec2{
-        padding-left: 0px;
-    }
-    .inpjoin1 #refresh2 {
-        left: 268px;
-        bottom: 8px;
-    }
-    .inpjoin #refresh1 {
-        bottom: 8px;
-        left: 270px;
-    }
+   .but{
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+   }
     .but button {
         padding: 8px 46px;
-        font-size: 1.2rem;
+         font-size: 1.2rem; 
     }
     #ref {
         padding: 5px 14px;
