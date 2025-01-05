@@ -46,7 +46,7 @@ header{
 }
 .sec1 label{
     font-weight: bold;
-    color:#281501;
+    color:#edf1ec;
     font-size: 1.3rem;
 }
 .sec1  #city{
@@ -190,6 +190,7 @@ display: flex;
        }
        .sec1 label{
         font-size: 1.6rem;
+        color: #281501;
     }
    .but{
     display: flex;
